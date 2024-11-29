@@ -72,4 +72,18 @@ class Database{
         //SELECT FROM PESSOA
         return $this->execute($query);
     }
+
+    public function delete($where){
+        $sql = 'DELETE FROM '.$this->table.' WHERE '.$where;
+        $result = $this->execute($sql);
+
+        // if($result){
+        //     return true;
+        // }
+        // else{
+        //     return false;
+        // }
+
+        return true;
+    }
 }

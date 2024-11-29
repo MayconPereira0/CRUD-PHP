@@ -41,4 +41,8 @@ class Cliente{
         return (new Database('cliente'))->select()->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function excluir($id){
+        return (new Database('cliente'))->delete('id='.$id);
+    }
+
 }   
